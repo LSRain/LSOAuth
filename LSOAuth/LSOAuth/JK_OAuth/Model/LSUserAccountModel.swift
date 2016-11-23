@@ -1,5 +1,5 @@
 //
-//  HMUserAccountModel.swift
+//  LSUserAccountModel.swift
 //  LSOAuth
 //
 //  Created by WangBiao on 2016/10/29.
