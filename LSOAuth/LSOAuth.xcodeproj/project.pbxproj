@@ -12,9 +12,11 @@
 		5136C2FE1DE6125600341DAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5136C2FC1DE6125600341DAC /* Main.storyboard */; };
 		5136C3001DE6125600341DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5136C2FF1DE6125600341DAC /* Assets.xcassets */; };
 		5136C3031DE6125600341DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5136C3011DE6125600341DAC /* LaunchScreen.storyboard */; };
+		DCFF608330225CD17B3C65DD /* Pods_LSOAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B226FDD8F8D2820304BE56B /* Pods_LSOAuth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B226FDD8F8D2820304BE56B /* Pods_LSOAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LSOAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5136C2F51DE6125600341DAC /* LSOAuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSOAuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5136C2F81DE6125600341DAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5136C2FA1DE6125600341DAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		5136C2FF1DE6125600341DAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5136C3021DE6125600341DAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5136C3041DE6125600341DAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9339BAC79CB24A29739CE361 /* Pods-LSOAuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSOAuth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LSOAuth/Pods-LSOAuth.debug.xcconfig"; sourceTree = "<group>"; };
+		9E9AF75F350BE424F376ADAB /* Pods-LSOAuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSOAuth.release.xcconfig"; path = "Pods/Target Support Files/Pods-LSOAuth/Pods-LSOAuth.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCFF608330225CD17B3C65DD /* Pods_LSOAuth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				5136C2F71DE6125600341DAC /* LSOAuth */,
 				5136C2F61DE6125600341DAC /* Products */,
+				9A2DA74AEDDC9DFE9625921A /* Pods */,
+				A338D41606444AA5A821EF73 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = LSOAuth;
 			sourceTree = "<group>";
 		};
+		9A2DA74AEDDC9DFE9625921A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9339BAC79CB24A29739CE361 /* Pods-LSOAuth.debug.xcconfig */,
+				9E9AF75F350BE424F376ADAB /* Pods-LSOAuth.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A338D41606444AA5A821EF73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B226FDD8F8D2820304BE56B /* Pods_LSOAuth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5136C3071DE6125600341DAC /* Build configuration list for PBXNativeTarget "LSOAuth" */;
 			buildPhases = (
+				B2C8666BD94D879A5EF8FC36 /* [CP] Check Pods Manifest.lock */,
 				5136C2F11DE6125600341DAC /* Sources */,
 				5136C2F21DE6125600341DAC /* Frameworks */,
 				5136C2F31DE6125600341DAC /* Resources */,
+				2CF4B48E91A293F1AFCFF4E5 /* [CP] Embed Pods Frameworks */,
+				C6B7E26DBDB9E3D0EB73DD64 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CF4B48E91A293F1AFCFF4E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LSOAuth/Pods-LSOAuth-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2C8666BD94D879A5EF8FC36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C6B7E26DBDB9E3D0EB73DD64 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LSOAuth/Pods-LSOAuth-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5136C2F11DE6125600341DAC /* Sources */ = {
@@ -258,6 +333,7 @@
 		};
 		5136C3081DE6125600341DAC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9339BAC79CB24A29739CE361 /* Pods-LSOAuth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LSOAuth/Info.plist;
@@ -270,6 +346,7 @@
 		};
 		5136C3091DE6125600341DAC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E9AF75F350BE424F376ADAB /* Pods-LSOAuth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LSOAuth/Info.plist;
@@ -299,6 +376,7 @@
 				5136C3091DE6125600341DAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

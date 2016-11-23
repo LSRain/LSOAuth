@@ -1,0 +1,19 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'LSOAuth' do
+  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for LSOAuth
+
+# 网络框架
+pod 'AFNetworking'
+# 加载指示器
+pod 'SVProgressHUD'
+# 网络图片加载
+pod 'SDWebImage'
+# YYModel
+pod 'YYModel'
+
+end
