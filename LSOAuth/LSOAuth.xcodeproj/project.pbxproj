@@ -12,6 +12,18 @@
 		5136C2FE1DE6125600341DAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5136C2FC1DE6125600341DAC /* Main.storyboard */; };
 		5136C3001DE6125600341DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5136C2FF1DE6125600341DAC /* Assets.xcassets */; };
 		5136C3031DE6125600341DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5136C3011DE6125600341DAC /* LaunchScreen.storyboard */; };
+		5136C31E1DE6132000341DAC /* CommonTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5136C30C1DE6132000341DAC /* CommonTools.swift */; };
+		5136C31F1DE6132000341DAC /* Ext+UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5136C30E1DE6132000341DAC /* Ext+UIBarButtonItem.swift */; };
+		5136C3201DE6132000341DAC /* Ext+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5136C30F1DE6132000341DAC /* Ext+UIButton.swift */; };
+		5136C3211DE6132000341DAC /* LSNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5136C3101DE6132000341DAC /* LSNetworkTools.swift */; };
+		5136C3221DE6132000341DAC /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5136C3121DE6132000341DAC /* 1.png */; };
+		5136C3231DE6132000341DAC /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5136C3131DE6132000341DAC /* 2.png */; };
+		5136C3241DE6132000341DAC /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5136C3141DE6132000341DAC /* 3.png */; };
+		5136C3251DE6132000341DAC /* LSUserAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5136C3161DE6132000341DAC /* LSUserAccountModel.swift */; };
+		5136C3261DE6132000341DAC /* LSUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5136C3171DE6132000341DAC /* LSUserModel.swift */; };
+		5136C3271DE6132000341DAC /* readMe.md in Sources */ = {isa = PBXBuildFile; fileRef = 5136C3181DE6132000341DAC /* readMe.md */; };
+		5136C3281DE6132000341DAC /* LSOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5136C31B1DE6132000341DAC /* LSOAuthViewController.swift */; };
+		5136C3291DE6132000341DAC /* LSUserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5136C31D1DE6132000341DAC /* LSUserAccountViewModel.swift */; };
 		DCFF608330225CD17B3C65DD /* Pods_LSOAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B226FDD8F8D2820304BE56B /* Pods_LSOAuth.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +36,18 @@
 		5136C2FF1DE6125600341DAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5136C3021DE6125600341DAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5136C3041DE6125600341DAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5136C30C1DE6132000341DAC /* CommonTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTools.swift; sourceTree = "<group>"; };
+		5136C30E1DE6132000341DAC /* Ext+UIBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ext+UIBarButtonItem.swift"; sourceTree = "<group>"; };
+		5136C30F1DE6132000341DAC /* Ext+UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ext+UIButton.swift"; sourceTree = "<group>"; };
+		5136C3101DE6132000341DAC /* LSNetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSNetworkTools.swift; sourceTree = "<group>"; };
+		5136C3121DE6132000341DAC /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		5136C3131DE6132000341DAC /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		5136C3141DE6132000341DAC /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		5136C3161DE6132000341DAC /* LSUserAccountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSUserAccountModel.swift; sourceTree = "<group>"; };
+		5136C3171DE6132000341DAC /* LSUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSUserModel.swift; sourceTree = "<group>"; };
+		5136C3181DE6132000341DAC /* readMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readMe.md; sourceTree = "<group>"; };
+		5136C31B1DE6132000341DAC /* LSOAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSOAuthViewController.swift; sourceTree = "<group>"; };
+		5136C31D1DE6132000341DAC /* LSUserAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSUserAccountViewModel.swift; sourceTree = "<group>"; };
 		9339BAC79CB24A29739CE361 /* Pods-LSOAuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSOAuth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LSOAuth/Pods-LSOAuth.debug.xcconfig"; sourceTree = "<group>"; };
 		9E9AF75F350BE424F376ADAB /* Pods-LSOAuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSOAuth.release.xcconfig"; path = "Pods/Target Support Files/Pods-LSOAuth/Pods-LSOAuth.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +85,7 @@
 		5136C2F71DE6125600341DAC /* LSOAuth */ = {
 			isa = PBXGroup;
 			children = (
+				5136C30A1DE6132000341DAC /* JK_OAuth */,
 				5136C2F81DE6125600341DAC /* AppDelegate.swift */,
 				5136C2FA1DE6125600341DAC /* ViewController.swift */,
 				5136C2FC1DE6125600341DAC /* Main.storyboard */,
@@ -69,6 +94,81 @@
 				5136C3041DE6125600341DAC /* Info.plist */,
 			);
 			path = LSOAuth;
+			sourceTree = "<group>";
+		};
+		5136C30A1DE6132000341DAC /* JK_OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				5136C30B1DE6132000341DAC /* Common */,
+				5136C3111DE6132000341DAC /* img */,
+				5136C3151DE6132000341DAC /* Model */,
+				5136C3181DE6132000341DAC /* readMe.md */,
+				5136C3191DE6132000341DAC /* View */,
+				5136C31C1DE6132000341DAC /* ViewModel */,
+			);
+			path = JK_OAuth;
+			sourceTree = "<group>";
+		};
+		5136C30B1DE6132000341DAC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5136C30C1DE6132000341DAC /* CommonTools.swift */,
+				5136C30D1DE6132000341DAC /* Extension */,
+				5136C3101DE6132000341DAC /* LSNetworkTools.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5136C30D1DE6132000341DAC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5136C30E1DE6132000341DAC /* Ext+UIBarButtonItem.swift */,
+				5136C30F1DE6132000341DAC /* Ext+UIButton.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		5136C3111DE6132000341DAC /* img */ = {
+			isa = PBXGroup;
+			children = (
+				5136C3121DE6132000341DAC /* 1.png */,
+				5136C3131DE6132000341DAC /* 2.png */,
+				5136C3141DE6132000341DAC /* 3.png */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+		5136C3151DE6132000341DAC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5136C3161DE6132000341DAC /* LSUserAccountModel.swift */,
+				5136C3171DE6132000341DAC /* LSUserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5136C3191DE6132000341DAC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5136C31A1DE6132000341DAC /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5136C31A1DE6132000341DAC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5136C31B1DE6132000341DAC /* LSOAuthViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5136C31C1DE6132000341DAC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5136C31D1DE6132000341DAC /* LSUserAccountViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		9A2DA74AEDDC9DFE9625921A /* Pods */ = {
@@ -151,6 +251,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5136C3031DE6125600341DAC /* LaunchScreen.storyboard in Resources */,
+				5136C3221DE6132000341DAC /* 1.png in Resources */,
+				5136C3231DE6132000341DAC /* 2.png in Resources */,
+				5136C3241DE6132000341DAC /* 3.png in Resources */,
 				5136C3001DE6125600341DAC /* Assets.xcassets in Resources */,
 				5136C2FE1DE6125600341DAC /* Main.storyboard in Resources */,
 			);
@@ -212,7 +315,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5136C2FB1DE6125600341DAC /* ViewController.swift in Sources */,
+				5136C3271DE6132000341DAC /* readMe.md in Sources */,
+				5136C3291DE6132000341DAC /* LSUserAccountViewModel.swift in Sources */,
+				5136C3261DE6132000341DAC /* LSUserModel.swift in Sources */,
+				5136C3201DE6132000341DAC /* Ext+UIButton.swift in Sources */,
 				5136C2F91DE6125600341DAC /* AppDelegate.swift in Sources */,
+				5136C3251DE6132000341DAC /* LSUserAccountModel.swift in Sources */,
+				5136C3211DE6132000341DAC /* LSNetworkTools.swift in Sources */,
+				5136C3281DE6132000341DAC /* LSOAuthViewController.swift in Sources */,
+				5136C31F1DE6132000341DAC /* Ext+UIBarButtonItem.swift in Sources */,
+				5136C31E1DE6132000341DAC /* CommonTools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
