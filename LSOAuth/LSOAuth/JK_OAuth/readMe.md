@@ -84,4 +84,4 @@ pod 'YYModel'
     - NSKeyedArchiver归档入沙盒缓存模型
     
 ###版本信息
-v1.0(更新时间:2016年10月29日)
+v1.0
