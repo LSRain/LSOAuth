@@ -5,6 +5,7 @@
 //  Created by WangBiao on 2016/10/29.
 //  Copyright © 2016年 lsrain. All rights reserved.
 //
+
 /*
     - 等同于 OC中的 pch 文件   全局共享
  */
@@ -21,13 +22,14 @@ import UIKit
 let LSAPPKEY = " "
 let LSAPPSECRET = " "
 let LSREDIRECTURI = " " //回调页: 如`http://www.baidu.com`
+
 /* 微博账号和密码 */
 let LSWBNAME = " "
 let LSWBPASSWD = " "
 
 /*************************************************************************
  *
- *	宏
+ *	全局宏
  *
  *************************************************************************/
 /* 通知 */
@@ -37,8 +39,9 @@ let LSSWITCHROOTVCNOTI = "LSSWITCHROOTVCNOTI"
 let LSSCREENW = UIScreen.main.bounds.width
 let LSSCREENH = UIScreen.main.bounds.height
 
-/* JK微博的主题颜色 */
+/* 微博的主题颜色 */
 let LSTHEMECOLOR = UIColor.orange
+
 /* 随机颜色 */
 func LSRandomColor() -> UIColor{
     let r = CGFloat(arc4random()%256)

@@ -17,11 +17,10 @@ enum LSNetworkToolsMethod: String {
 }
 
 class LSNetworkTools: AFHTTPSessionManager {
-    // 全局访问点
     static let sharedTools: LSNetworkTools = {
         let tools = LSNetworkTools()
-        // 反序列化格式
         tools.responseSerializer.acceptableContentTypes?.insert("text/plain")
+        
         return tools
     }()
     
@@ -41,24 +40,21 @@ class LSNetworkTools: AFHTTPSessionManager {
                     failure(error)
             })
         }else {
-            // post 请求
             post(urlString, parameters: parameters, progress: nil, success: { (_, responseObject) in
                 success(responseObject)
                 }, failure: { (_, error) in
                     failure(error)
             })
         }
-        
     }
 }
 
 // MARK: - OAuth 授权相关接口
 extension LSNetworkTools {
-    // 获取 userAccount
+    
+    /// 获取 userAccount
     func oauthLoadUserAccount(code: String, success:@escaping (Any?)->(), failure:@escaping (Error)->()){
-        // 请求 urlString
         let urlString = "https://api.weibo.com/oauth2/access_token"
-        // 请求参数
         let params = [
             "client_id": LSAPPKEY,
             "client_secret": LSAPPSECRET,
@@ -66,20 +62,18 @@ extension LSNetworkTools {
             "code": code,
             "redirect_uri": LSREDIRECTURI
         ]
-        // 发送请求
+
         requet(method: LSNetworkToolsMethod.post, urlString: urlString, parameters: params, success: success, failure: failure)
     }
     
-    // 请求用户信息
+    /// 请求用户信息
     func oauthLoadUserInfo(model: LSUserAccountModel, success:@escaping (Any?)->(), failure:@escaping (Error)->()){
-        // 请求 urlString
         let urlString = "https://api.weibo.com/2/users/show.json"
-        // 请求参数
         let params = [
             "access_token":model.access_token!,
             "uid":model.uid!
         ]
-        // 发送请求
+
         requet(method: LSNetworkToolsMethod.get, urlString: urlString, parameters: params, success: success, failure: failure)
     }
 }

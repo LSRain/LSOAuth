@@ -27,28 +27,22 @@ import UIKit
 
 // MARK: - ViewModel帮助控制器请求token&用户信息
 extension LSUserAccountViewModel {
+    
     // 请求 token
     func getUserAccount(code: String, finish:@escaping (Bool)->()){
-        // 发送请求
+
         LSNetworkTools.sharedTools.oauthLoadUserAccount(code: code, success: { (response) in
             
-            // 判断response 是否为 nil 而且是否可以转成字典
-            // guard 或者 if-let 判断就是可选值 所以如果转成你想要的类型 需要使用 as? 即可
             guard let res = response as?[String: Any] else{
                 finish(false)
                 return
             }
             
-            // 字典转模型
             let userAccountModel = LSUserAccountModel.yy_model(withJSON: res)
-            
-            // 判断userAccountModel 不为 nil
             guard let model = userAccountModel else {
                 finish(false)
                 return
             }
-            
-            // 请求用户信息
             self.getUserInfo(model: model, finish: finish)
             }) { (error) in
                 finish(false)
@@ -58,22 +52,16 @@ extension LSUserAccountViewModel {
     
     // 请求用户信息
     func getUserInfo(model: LSUserAccountModel, finish:@escaping (Bool)->()){
-        // 发送请求
         LSNetworkTools.sharedTools.oauthLoadUserInfo(model: model, success: { (response) in
-            
-            // 判断response 是否为 nil 而且是否可以转成一个字典
             guard let res = response as?[String: Any] else{
                 finish(false)
                 return
             }
             
-            // 因为后期需要保存该模型 直接使用 一个 model 即可 需要直接手动赋值]
             model.screen_name = res["screen_name"] as? String
             model.avatar_large = res["avatar_large"] as? String
-            
-            // 保存模型
             self.saveUserAccountModel(model: model)
-            // 最终的成功的执行闭包
+
             finish(true)
             }) { (error) in
                 finish(false)
@@ -84,15 +72,13 @@ extension LSUserAccountViewModel {
 
 // MARK: - 归档解档
 extension LSUserAccountViewModel {
+    
     // 保存用户信息对象
     func saveUserAccountModel(model: LSUserAccountModel){
-        
-        // 因为首次使用该类的时候 会走 init 方法 但是我们第一次登陆 app 根本没有保存过个人信息数据 导致userAccountModel 为 nil
-        // 解决方法 需要外界调用该方法保存用户对象的时候 程序员手动给单例对象的userAccountModel 赋值
         userAccountModel = model
         NSKeyedArchiver.archiveRootObject(model, toFile: file)
     }
-    // 获取用户信息对象
+
     fileprivate func getUserAccountModel() ->LSUserAccountModel?{
         let result = NSKeyedUnarchiver.unarchiveObject(withFile: file) as? LSUserAccountModel
         return result
@@ -102,14 +88,7 @@ extension LSUserAccountViewModel {
 // 自定义类 没有继承
 class LSUserAccountViewModel {
     
-    /// 访问令牌
     var accessToken:String?{
-        // 代表用户登录过 而且保存过数据
-        // 需要判断是否过期了么
-        // 如果过期时间和当前时间比较 == 降序 代表没有过期
-        /*
-         - 为什么简写: 因为如果userAccountModel==nil 在和当前时间比较 也不会满足条件的如果可以直接简写
-         */
         if userAccountModel?.expires_Date?.compare(Date()) == ComparisonResult.orderedDescending {
             return userAccountModel?.access_token
         }else {
@@ -117,23 +96,15 @@ class LSUserAccountViewModel {
         }
     }
     
-    // 全局访问点 - 使用很频繁 当前 app 中可能多个模块均需要使用
     static let sharedTools: LSUserAccountViewModel = LSUserAccountViewModel()
-    
-    // 用户信息对象
     var userAccountModel: LSUserAccountModel?
-    
-    // 沙盒路径
     let file = (NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).last! as NSString).appendingPathComponent("userAccount.archiver")
     
     var isLogin:Bool{
         return accessToken != nil
     }
     
-    // 没有继承的类 也需要实现 init 方法(如果外界调用sharedTools 就会走 init 方法 我们需要给单例对象身上userAccountModel 赋值)
     init() {
-        
-        // 给用户模型赋值
         userAccountModel = getUserAccountModel()
     }
     

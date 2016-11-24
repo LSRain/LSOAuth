@@ -23,10 +23,7 @@ class LSUserAccountModel: NSObject, NSCoding {
     var access_token: String?
     /// access_token的生命周期，单位是秒数
     var expires_in:TimeInterval = 0{
-        // 当expires_in 被赋值的时候就会走 didSet 方法
         didSet{
-            // public typealias TimeInterval = Double typealias别名
-            // 通过当前日期 + 过期的秒数 = 我们将要过期的日期
             expires_Date = Date().addingTimeInterval(expires_in)
         }
     }
@@ -39,17 +36,16 @@ class LSUserAccountModel: NSObject, NSCoding {
     /// 过期时间
     var expires_Date: Date?
     
-    // 归档
     func encode(with aCoder: NSCoder) {
         self.yy_modelEncode(with: aCoder)
     }
-    // 解档
+    
     required init?(coder aDecoder: NSCoder) {
         super.init()
         self.yy_modelInit(with: aDecoder)
     }
     
-    /// 模型descripition
+    /// descripition
     override var description: String{
         let keys = ["access_token", "expires_Date", "uid", "avatar_large", "screen_name"]
         return dictionaryWithValues(forKeys: keys).description

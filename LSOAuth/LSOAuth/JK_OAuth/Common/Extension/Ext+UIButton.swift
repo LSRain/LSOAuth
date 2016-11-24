@@ -17,15 +17,12 @@ extension UIButton {
     /// - parameter target:             target
     /// - parameter action:            action
     ///
-    /// - returns:
+    /// - returns: nil
     convenience init(setImgName: String, backgroundImgName: String, target: Any?, action: Selector) {
         self.init()
-        // 添加点击事件
         self.addTarget(target, action: action, for: UIControlEvents.touchUpInside)
-        // 设置 image
         self.setImage(UIImage(named: setImgName), for: UIControlState.normal)
         self.setImage(UIImage(named: "\(setImgName)_highlighted"), for: UIControlState.highlighted)
-        // 设置背景图片
         self.setBackgroundImage(UIImage(named: backgroundImgName), for: UIControlState.normal)
         self.setBackgroundImage(UIImage(named: "\(backgroundImgName)_highlighted"), for: UIControlState.highlighted)
         self.sizeToFit()
@@ -37,13 +34,11 @@ extension UIButton {
     /// - parameter target:                target
     /// - parameter action:                action
     ///
-    /// - returns:
+    /// - returns: nil
     convenience init(setHighlightedImgName: String? = nil, title:  String? = nil, target: Any?, action: Selector) {
         self.init()
-        // 添加点击事件
         self.addTarget(target, action: action, for: UIControlEvents.touchUpInside)
         if let img = setHighlightedImgName {
-            // 设置 image
             self.setImage(UIImage(named: img), for: UIControlState.normal)
             self.setImage(UIImage(named: "\(img)_highlighted"), for: UIControlState.highlighted)
         }
@@ -58,7 +53,6 @@ extension UIButton {
         self.sizeToFit()
     }
     
-    
     /// 实例化一个有背景图片和文字的 button
     ///
     /// - parameter setBackgroundImgName:
@@ -68,10 +62,9 @@ extension UIButton {
     /// - parameter target:
     /// - parameter action:
     ///
-    /// - returns: <#return value description#>
+    /// - returns: nil
     convenience init(setBackgroundImgName: String, title:  String, fontSize: CGFloat, titleColor: UIColor,  target: Any?, action: Selector) {
         self.init()
-        // 添加点击事件
         self.addTarget(target, action: action, for: UIControlEvents.touchUpInside)
         self.setBackgroundImage(UIImage(named: setBackgroundImgName), for: UIControlState.normal)
         self.setTitle(title, for: UIControlState.normal)

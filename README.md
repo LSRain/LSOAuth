@@ -1,13 +1,8 @@
 # LSOAuth
-
-## 效果图
-![LSOAuth.gif](http://upload-images.jianshu.io/upload_images/2329629-00a3099048c22291.gif?imageMogr2/auto-orient/strip)
-
-## LSOAuth使用说明
+## 使用说明
 ### 使用前说明
 1> 使用前，请确保控制器拥有一个导航控制器
-
-2> 出于账号安全保护，在此，我没有给出测试账号。请您在使用LSOAuth前先拥有一个微博开发者账号，并在通用工具类`CommonTools`中设置好APPKEY、回调页、微博账号密码等信息。
+2> 出于账号安全保护，在此，没有给出测试账号。请您在使用LSOAuth前先拥有一个微博开发者账号，并在通用工具类`CommonTools`中设置好APPKEY、回调页、微博账号密码等信息。
 
 ## 使用前配置
 手动配置信息：
@@ -83,8 +78,10 @@ func setNav() -> Void {
 - 登录 -> 授权
 - 会给我们 app 一个 用户对应的 code(授权码)
 - 新浪微博 特殊提供一个接口 只要你传入`code` 我就会给你对应这个人的 token
-- 你通过新浪微博给你的token 拼接对应微博请求个人信息的数据借口就可以拿到用户对应的用户信息(name img age sex...)
-- 这样我们 app 中 就有了用户的 name img age sex token
+- 通过新浪微博给你的token 拼接对应微博请求个人信息的数据接口就可以拿到用户对应的用户信息(name img age sex...)
+
+## 效果
+![LSOAuth.gif](http://upload-images.jianshu.io/upload_images/2329629-00a3099048c22291.gif?imageMogr2/auto-orient/strip)
 
 ###版本信息
 v1.0
