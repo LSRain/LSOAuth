@@ -6,22 +6,27 @@
 ## LSOAuth使用说明
 ### 使用前说明
 1> 使用前，请确保控制器拥有一个导航控制器
+
 2> 出于账号安全保护，在此，我没有给出测试账号。请您在使用LSOAuth前先拥有一个微博开发者账号，并在通用工具类`CommonTools`中设置好APPKEY、回调页、微博账号密码等信息。
 
 ## 使用前配置
 手动配置信息：
 在CommonTools中手动配置相关信息
 
-1. 微博API请求相关信息
+1> 微博API请求相关信息
 
+```
 * let LSAPPKEY = " "
 * let LSAPPSECRET = " "
 * let LSREDIRECTURI = " "
+```
 
-2. 微博账号和密码
+2> 微博账号和密码
 
+```
 * let LSWBNAME = " "
 * let LSWBPASSWD = " "
+```
 
 ###第三方框架依赖
 
@@ -82,5 +87,4 @@ func setNav() -> Void {
 - 这样我们 app 中 就有了用户的 name img age sex token
 
 ###版本信息
-v1.0(更新时间:2016年10月29日)
-
+v1.0
