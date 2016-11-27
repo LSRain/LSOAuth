@@ -84,6 +84,3 @@ OAuth授权登录
 
 ## 效果
 ![LSOAuth.gif](http://upload-images.jianshu.io/upload_images/2329629-00a3099048c22291.gif?imageMogr2/auto-orient/strip)
-
-###版本信息
-v1.0
