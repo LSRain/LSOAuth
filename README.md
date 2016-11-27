@@ -1,6 +1,6 @@
 # LSOAuth
-## 使用说明
-### 使用前说明
+## LSOAuth
+### 说明
 1> 使用前，请确保控制器拥有一个导航控制器
 
 2> 出于账号安全，在此没有给出测试账号。请您在使用LSOAuth前先拥有一个微博开发者账号，并在通用工具类`CommonTools`中设置好APPKEY、回调页、微博账号密码等信息。
@@ -38,8 +38,8 @@ pod 'SDWebImage'
 pod 'YYModel'
 ```
 
-## 说明
-### 框架逻辑
+## 架构
+### 结构
 使用MVVM的设计逻辑viewModel主要请求网络数据
 
 1. webView作为主控制器的根式图
@@ -53,8 +53,9 @@ pod 'YYModel'
     - 转换成模型
     - NSKeyedArchiver归档入沙盒缓存模型
     
-### 逻辑说明
+### 逻辑
 跳转到主控制即可完成OAuth授权
+
 主控制器：LSOAuthViewController
 
 1. 使用Modal或者push跳转到主控制器
@@ -72,7 +73,7 @@ func setNav() -> Void {
 ```
 
 ### 其他
-为什么使用OAuth授权登录？
+OAuth授权登录
 
 - 没有token 就没办法访问微博的公共接口
 - 使用微博登录  微博用户名 和 密码
