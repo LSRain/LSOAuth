@@ -11,7 +11,7 @@
 3> 手动配置信息：
 在CommonTools中手动配置相关信息
 
-1> 微博API请求相关信息
+- 微博API请求相关信息
 
 ```
 * let LSAPPKEY = " "
@@ -19,7 +19,7 @@
 * let LSREDIRECTURI = " "
 ```
 
-2> 微博账号和密码
+- 微博账号和密码
 
 ```
 * let LSWBNAME = " "
